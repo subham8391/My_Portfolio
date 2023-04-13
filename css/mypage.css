@@ -4,3 +4,70 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.flex{
+    display: flex;
+}
+/* hedder section style */
+main .hedder{
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/image1.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+.hebody{
+    background: rgba(19, 73, 127, 0.415);
+    backdrop-filter: blur(3px);
+    height: 100vh;
+}
+.nber{
+    /* position: fixed;  */
+    height: 10vh;
+    width: 100%;
+    z-index: 7;
+}
+.tecon{
+    /* margin-top:10px ; */
+    height: 75vh;
+    width: 100%;
+    /* background-color: rgba(21, 21, 206, 0.265); */
+    /* backdrop-filter: blur(3px);  */
+   
+    justify-content: center;
+    align-items: center;
+   
+}
+.texc{
+    /* height: 30vh; */
+    width: 50%;
+    /* background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px); 
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px; */
+}
+.textc{
+    /* height: 15vh; */
+    width: 100%;
+    /* background-color: white; */
+    justify-content: center;
+    align-items: center;
+   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.lw{
+
+}
+.seary{
+    /* height: 15vh; */
+    width: 100%;
+    /* background-color: rgb(183, 200, 26); */
+    justify-content: center;
+    align-items: center;
+}
+input[type=search]:focus{
+    box-shadow: none!important;
+}
