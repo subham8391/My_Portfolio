@@ -3,10 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
-
+/* body{
+    background: rgb(8, 8, 51);
+} */
 .flex{
     display: flex;
+}
+.mce{
+    background: rgb(8, 8, 51);
 }
 /* hedder section style */
 main .hedder{
@@ -20,11 +26,11 @@ main .hedder{
 }
 .hebody{
     background: rgba(19, 73, 127, 0.415);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(4px);
     height: 100vh;
 }
 .nber{
-    /* position: fixed;  */
+   /* position: fixed;   */
     height: 10vh;
     width: 100%;
     z-index: 7;
@@ -68,6 +74,79 @@ main .hedder{
     justify-content: center;
     align-items: center;
 }
-input[type=search]:focus{
-    box-shadow: none!important;
+/* about me section style */
+
+.about_me{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: rgb(33, 33, 46);
+    border-radius: 0px 0px 15% 30%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
+.meimg{
+    width: 30%;
+    height: 100vh;
+    /* background-color: brown; */
+    justify-content: center;
+}
+.abimg{
+    width: 100%;
+}
+.readab{
+    width: 60%;
+    /* height: 60vh; */
+   
+    flex-direction: column;
+    justify-content: center;
+}
+.abbtn{
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: .625rem;
+}
+
+
+
+/* for responshive ness */
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .tecon{
+        justify-content: center;
+        text-align: center;
+    }
+    .about_me{
+        width: 100%;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        overflow: none;
+    }
+    .meimg{
+        width: 40%;
+        height: 20.5rem;
+    }
+    .readab{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color:rgb(29, 29, 53);
+    }
+    /* .abtext{
+        
+    } */
+    .abbtn{
+        flex-direction: column;
+        margin-bottom: .625rem;
+       
+    }
+    .abbtn button{
+        width: 100%;
+        padding-bottom: .625rem;
+    }
+  }
