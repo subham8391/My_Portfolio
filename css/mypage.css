@@ -108,9 +108,42 @@ main .hedder{
     flex-direction: row;
     gap: .625rem;
 }
-
-
-
+/* experties section */
+.expert{
+    width: 100%;
+    height: 100vh;
+    /* background-color: aquamarine; */
+    justify-content: center;
+    align-items: center;
+}
+.excont{
+    width: 90%;
+    height: 80vh;
+    /* background-color: brown; */
+    justify-content: center;
+    flex-direction: column;
+}
+.progss{
+    width: 100%;
+    height: auto;
+    /* background-color: yellow; */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction:row;
+    row-gap: 3.625rem;
+}
+.paria{
+    width: 40%;
+    height: 20vh;
+    /* background-color: aquamarine; */
+    justify-content: center;
+    flex-direction: column;
+    row-gap: .325rem;
+}
+.ammo{
+    justify-content: space-between;
+}
 /* for responshive ness */
 
 @media only screen and (max-width: 768px) {
@@ -148,5 +181,25 @@ main .hedder{
     .abbtn button{
         width: 100%;
         padding-bottom: .625rem;
+    }
+
+    .expert{
+        width: 100%;
+        height: auto;
+    }
+    .excont{
+        width: 100%;
+        height: auto;
+    }
+    .progss{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+    .paria{
+        width: 90%;
+        height: auto;
+        margin-top: .625rem;
+        margin-bottom: .625rem;
     }
   }
