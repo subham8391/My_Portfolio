@@ -152,6 +152,7 @@ main .hedder{
     /* background-color: aqua; */
     justify-content: center;
     align-items: center;
+    
 }
 .serv{
     width: 90%;
@@ -166,9 +167,10 @@ main .hedder{
 }
 .wraper{
     border-radius: 1.0rem;
+    
     height: 70vh;
     /* border: 1px solid gray; */
-    overflow-x: auto;
+    /* overflow-x: auto; */
     /* background-color: aqua; */
     /* flex-wrap: wrap; */
 }
@@ -181,11 +183,76 @@ main .hedder{
     /* margin-left: 5.625rem; */
     /* text-align: center; */
      background-color:rgb(27, 27, 67);
+     transition: 0.5s;
     
+}
+.card:hover{
+    z-index: 7;
+    border-radius: 25px;
+    background: rgb(27, 27, 67);
+    box-shadow:  10px 10px 52px #00ffc3,
+                 -10px -10px 52px #00d0ff;
+                 
+}
+
+/* my study and exprience */
+
+.studyaexpri{
+    height: 105vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    padding: 35px 10%;
+}
+.rowc{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid: column gap 1.25rem;
+}
+.colc header.title{
+    /* font-family: helvetica;
+    color: yellow; */
+    padding: 0rem 0rem 1.25rem 1.875rem;
+}
+.colc .contents{
+    padding: 0rem 1.875rem;
+    border-left: 2px solid rgb(255, 230, 0);
+}
+.colc .contents .box{
+    position: relative;
+    padding: 20px;
+    border: 1px solid rgb(35, 35, 54);
+    background-color: rgb(27, 27, 67);
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-bottom: .625rem;
+}
+
+.colc .contents .box:hover{
+    z-index: 7;
+    border-radius: 15px;
+    background: rgb(27, 27, 67);
+    box-shadow:  3px 3px 30px #00ffc3,
+                 -3px -3px 30px #00d0ff;
+}
+.colc .contents .box::before{
+    content: '';
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    right: calc(100% + 21px);
+    top: 0;
+    background-color: gold;
+    border: 4px solid rgb(238, 241, 242);
+
 }
 /* for responshive ness */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
     /* For mobile phones: */
     .tecon{
         justify-content: center;
@@ -243,4 +310,46 @@ main .hedder{
         margin-top: .625rem;
         margin-bottom: .625rem;
     }
+    .service{
+        width: 100%;
+        height: auto;
+    }
+    .serv{
+        height: auto
+    }
+    .wraper{
+        border-radius: 1.0rem;
+        height: 75vh;
+        /* border: 1px solid gray; */
+        overflow-x: auto;
+        /* background-color: aqua; */
+        /* flex-wrap: wrap; */
+    }
+    .wraper::-webkit-scrollbar{
+        width: 0;
+    }
+    .card{
+        height: auto;
+    }
+    .card:hover{
+        /* margin-bottom: 1.25rem; */
+        border-radius: 25px;
+        
+        background: rgb(27, 27, 67);
+        box-shadow: inset 5px 5px 25px #00ffc3,
+            inset -5px -5px 25px  #00d0ff;
+    }
+    .studyaexpri{
+        height: auto;
+        width: 100%;
+       
+    }
+    .rowc{
+        grid-template-columns: 1fr;
+    }
+    .rowc .colc:nth-child(2){
+        margin-top: 1.25rem;
+    }
   }
+
+
