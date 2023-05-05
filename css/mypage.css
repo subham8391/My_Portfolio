@@ -95,6 +95,11 @@ main .hedder{
 }
 .abimg{
     width: 100%;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.abimg:hover{
+    opacity: 0.7;
 }
 .readab{
     width: 55%;
@@ -133,6 +138,7 @@ main .hedder{
     flex-direction:row;
     row-gap: 3.625rem;
 }
+
 .paria{
     width: 40%;
     height: 20vh;
@@ -295,6 +301,45 @@ main .hedder{
     background-position: center;
     height: 80vh;
 }
+/* blog section */
+.blog_section{
+    width: 100%;
+    height: 87vh;
+    /* background-color: antiquewhite; */
+    justify-content: center;
+    align-items: center;
+}
+.blg_sec{
+    width: 90%;
+    height: 80vh;
+    /* background-color: #00ffc3; */
+    
+    
+}
+.blg_con{
+    width: 100%;
+    height: 70vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.blg_con .card{
+    background-color:rgb(27, 27, 67); 
+    border-radius: 1.5625rem;
+    overflow: hidden;
+}
+.blg_con .card img{
+    border-radius:1.4rem 1.4rem 0rem 0rem ;
+    transition: transform .5s ease;
+}
+.blg_con .card:hover{
+    background: rgb(27, 27, 67);
+    box-shadow: inset 5px 5px 25px #00ffc3,
+        inset -5px -5px 25px  #00d0ff;
+}
+.blg_con .card:hover img{
+    transform: scale(1.1);
+  
+  }
 /* for responshive ness */
 
 @media only screen and (max-width: 1000px) {
@@ -399,6 +444,22 @@ main .hedder{
     }
     .rowc .colc:nth-child(2){
         margin-top: 1.25rem;
+    }
+    .blog_section{
+        height: auto;
+        width: 100%;
+    }
+    .blg_sec{
+        width: 90%;
+        height: auto;
+        margin-bottom: 1.25rem;
+        
+        
+    }
+    .blg_con{
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.25rem;
     }
   }
 
