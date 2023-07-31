@@ -150,7 +150,12 @@ main .hedder{
 .ammo{
     justify-content: space-between;
 }
-
+.progress-bar {
+    transition: width 0.3s ease;
+}
+.progress-bar:hover {
+    width: 100%;
+}
 /* service section */
 .service{
     width: 100%;
@@ -407,6 +412,7 @@ transition: all 0.5s;
     justify-content: center;
     align-items: center;
 }
+
 /* for responshive ness */
 
 @media only screen and (max-width: 1000px) {
