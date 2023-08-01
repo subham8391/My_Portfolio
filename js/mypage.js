@@ -108,56 +108,57 @@ downloadCvButton.addEventListener('click', () => {
     link.download = 'Subham_Das_CV.pdf';
     link.click();
 });
-
-// Expertise data array
+//Experties Section
 const expertiseData = [
-    { title: 'Web-Design', skill: 'HTML5', percentage: 80 },
-    { title: 'Graphic-Design', skill: 'CSS', percentage: 70 },
-    { title: 'Web-Devlopment', skill: 'JAVA', percentage: 90 },
-    { title: 'Degital-Marketing', skill: 'JAVA SCRIPT', percentage: 60 },
+  { title: 'Web-Designing', skill: 'HTML5', percentage: 90 },
+  { title: 'Web-Designing', skill: 'CSS', percentage: 85 },
+  { title: 'Web-Devlopment', skill: 'JAVA SCRIPT', percentage: 75 },
+  { title: 'Web-Devlopment', skill: 'REACT JS', percentage: 50 },
+  { title: 'Programming Language', skill: 'JAVA', percentage: 75 },
+  { title: 'Programming Language', skill: 'C', percentage: 70 },
 ];
 
 // Function to generate expertise HTML dynamically
 function generateExpertiseHTML(expertise) {
-    return `
-        <div class="paria flex">
-            <span class="fs-4 text-white fw-bold">${expertise.title}</span>
-            <div class="ammo flex">
-                <span class="fs-5 text-warning fw-bold">${expertise.skill}</span>
-                <span class="fs-3 text-white fw-bolder">${expertise.percentage}%</span>
-            </div>
-            <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="${expertise.percentage}" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar bg-warning text-dark" style="width: ${expertise.percentage}%">${expertise.percentage}%</div>
-            </div>
-        </div>`;
+  return `
+    <div class="paria flex">
+      <span class="fs-4 text-white fw-bold">${expertise.title}</span>
+      <div class="ammo flex">
+        <span class="fs-5 text-warning fw-bold">${expertise.skill}</span>
+        <span class="fs-3 text-white fw-bolder">${expertise.percentage}%</span>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="${expertise.percentage}" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar bg-warning text-dark" style="width: ${expertise.percentage}%">${expertise.percentage}%</div>
+      </div>
+    </div>`;
 }
 
 // Function to generate expertise elements and append to the container
 function renderExpertise() {
-    const expertiseContainer = document.getElementById('expertiseContainer');
-    let expertiseHTML = '';
+  const expertiseContainer = document.getElementById('expertiseContainer');
+  let expertiseHTML = '';
 
-    expertiseData.forEach((expertise) => {
-        expertiseHTML += generateExpertiseHTML(expertise);
-    });
+  expertiseData.forEach((expertise) => {
+    expertiseHTML += generateExpertiseHTML(expertise);
+  });
 
-    expertiseContainer.innerHTML = expertiseHTML;
+  expertiseContainer.innerHTML = expertiseHTML;
 }
 
 // Call the function to generate expertise elements on page load
-renderExpertise();
+renderExpertise(); 
 
     // Education and Experience data arrays
     const educationData = [
-        { period: '2018-2022', title: 'High School Degree', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi et, in asperiores rem laudantium corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, provident.' },
-        { period: '2018-2022', title: 'Bachelor`s Degree', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi et, in asperiores rem laudantium corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, provident.' },
-        { period: '2018-2022', title: 'Newton School Degree', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi et, in asperiores rem laudantium corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, provident.' },
+        { period: '2017-2020', title: 'High School Degree', description: 'I Passed My School from "Keshrambha Vidyasagar Vidyabhaban". During my Schooling, I scored 65% in the 10th Board Exam & 73% in the 12th Board Exam. In HS my stream was Science.' },
+        { period: '2020-2023', title: 'Bachelor`s Degree', description: 'I Passed college from "CCLMS Management College" Which is Affiliated With "MAKAUT University". I completed My bachelor`s Degree In BCA With an 8.69 CGPA Grade.' },
+        { period: '2022-2023', title: 'Newton School Degree', description: 'I am now Persuing that platform. It is a web Base Learning plat Form From Here I Learn Effectively Java, Data-Structure, Html, Css, Js, and React Js. I have already Complit Lenear DSA, HTML, CSS, and JS.' },
     ];
 
     const experienceData = [
-        { period: '2018-2022', title: 'Frontend Devloper', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi et, in asperiores rem laudantium corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, provident.' },
-        { period: '2018-2022', title: 'Full-Stack Devloper', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi et, in asperiores rem laudantium corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, provident.' },
-        { period: '2018-2022', title: 'UI/UX Designer', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi et, in asperiores rem laudantium corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, provident.' },
+        { period: '2020-2022', title: 'Web-Designer', description: 'Web design is a dynamic and creative field that involves the process of creating visually appealing and interactive websites.I have more than 2 year of experience...' },
+        { period: '2021-2023', title: 'Front-End Web Devloper', description: 'Front-end web development is the process of building and implementing the visual and interactive elements of a website that users directly interact with.I have more than 1 year of experience...' },
+        { period: '2022-2023', title: 'Full-Stack Web Devloper', description: 'Full-stack web development refers to the practice of building both the front-end and back-end components of a website or web application.I have little bite experience in it,not so much experienced.' },
     ];
 
     // Function to generate education or experience HTML dynamically
@@ -184,186 +185,152 @@ renderExpertise();
     generateDataHTML(experienceData, 'experienceSection', 'experienceContents');
 
 
-    document.addEventListener("DOMContentLoaded", function () {
-        // Sample project data (Replace this with your actual data from an external source or array)
-        const projects = [
-          {
-            title: "Project 1",
-            image: "my projectsec/asia-culturecenter-fGLuk0h0EsY-unsplash.jpg",
-            description: "Project 1 description...",
-          },
-          {
-            title: "Project 2",
-            image: "my projectsec/asia-culturecenter-fGLuk0h0EsY-unsplash.jpg",
-            description: "Project 2 description...",
-          },
-          // Add more project objects here
-        ];
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     // Sample project data (Replace this with your actual data from an external source or array)
+    //     const projects = [
+    //       {
+    //         title: "Project 1",
+    //         image: "image/4838534.jpg",
+    //         description: "Project 1 description...",
+    //       },
+    //       {
+    //         title: "Project 2",
+    //         image: "my projectsec/asia-culturecenter-fGLuk0h0EsY-unsplash.jpg",
+    //         description: "Project 2 description...",
+    //       },
+    //       // Add more project objects here
+    //     ];
   
-        const carouselInner = document.querySelector(".carousel-inner");
-        const viewMoreButtons = document.querySelectorAll(".btn.btn-link");
-        const prevButton = document.querySelector(".carousel-control-prev");
-        const nextButton = document.querySelector(".carousel-control-next");
-        let currentSlide = 0;
+    //     const carouselInner = document.querySelector(".carousel-inner");
+    //     const viewMoreButtons = document.querySelectorAll(".btn.btn-link");
+    //     const prevButton = document.querySelector(".carousel-control-prev");
+    //     const nextButton = document.querySelector(".carousel-control-next");
+    //     let currentSlide = 0;
   
-        // Function to generate carousel indicators and project cards dynamically
-        function generateCarousel() {
-          let carouselHTML = "";
-          let indicatorsHTML = "";
+    //     // Function to generate carousel indicators and project cards dynamically
+    //     function generateCarousel() {
+    //       let carouselHTML = "";
+    //       let indicatorsHTML = "";
   
-          projects.forEach((project, index) => {
-            const activeClass = index === 0 ? "active" : "";
-            carouselHTML += `
-              <div class="carousel-item ${activeClass}">
-                <div class="wraper flex">
-                  <div class="row row-cols-1 row-cols-md-3 g-4 mt-1">
-                    <div class="col">
-                      <div class="card text-bg-dark">
-                        <img src="${project.image}" class="card-img img-fluid" style="height: 16.2rem;" alt="...">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title">${project.title}</h5>
-                          <p class="card-text">${project.description}</p>
-                          <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                          <button type="button" class="btn btn-link text-warning text-decoration-none fs-6 fw-bolder text-warning view-more-btn">View-More</button>
-                        </div>
-                      </div>
-                    </div>
+    //       projects.forEach((project, index) => {
+    //         const activeClass = index === 0 ? "active" : "";
+    //         carouselHTML += `
+    //           <div class="carousel-item ${activeClass}">
+    //             <div class="wraper flex">
+    //               <div class="row row-cols-1 row-cols-md-3 g-4 mt-1">
+    //                 <div class="col">
+    //                   <div class="card text-bg-dark">
+    //                     <img src="${project.image}" class="card-img img-fluid" style="height: 16.2rem;" alt="...">
+    //                     <div class="card-img-overlay">
+    //                       <h5 class="card-title">${project.title}</h5>
+    //                       <p class="card-text">${project.description}</p>
+    //                       <p class="card-text"><small>Last updated 3 mins ago</small></p>
+    //                       <button type="button" class="btn btn-link text-warning text-decoration-none fs-6 fw-bolder text-warning view-more-btn">View-More</button>
+    //                     </div>
+    //                   </div>
+    //                 </div>
 
-                    <div class="col">
-                      <div class="card text-bg-dark">
-                        <img src="${project.image}" class="card-img img-fluid" style="height: 16.2rem;" alt="...">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title">${project.title}</h5>
-                          <p class="card-text">${project.description}</p>
-                          <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                          <button type="button" class="btn btn-link text-warning text-decoration-none fs-6 fw-bolder text-warning view-more-btn">View-More</button>
-                        </div>
-                      </div>
-                    </div>
+                    
+    //                 <!-- Add more columns for other projects if needed -->
+    //               </div>
+    //             </div>
+    //           </div>
+    //         `;
+  
+    //         indicatorsHTML += `<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="${index}" class="${activeClass}" aria-current="true" aria-label="Slide ${index + 1}"></button>`;
+    //       });
+  
+    //       carouselInner.innerHTML = carouselHTML;
+    //       document.querySelector(".carousel-indicators").innerHTML = indicatorsHTML;
+    //     }
+  
+    //     // Function to handle "View-More" button click event
+    //     function onViewMoreClick(event) {
+    //       const projectIndex = Array.from(viewMoreButtons).indexOf(event.target);
+    //       const project = projects[projectIndex];
+    //       // Replace this with your logic to show more information about the project (e.g., using a modal or expanding the card)
+    //       console.log("View-More button clicked for project:", project);
+    //     }
+  
+    //     // Event listener for "View-More" buttons
+    //     viewMoreButtons.forEach((btn) => {
+    //       btn.addEventListener("click", onViewMoreClick);
+    //     });
+  
+    //     // Function to show the specified slide
+    //     function showSlide(slideIndex) {
+    //       const slides = document.querySelectorAll(".carousel-item");
+    //       if (slideIndex >= slides.length) {
+    //         slideIndex = 0;
+    //       } else if (slideIndex < 0) {
+    //         slideIndex = slides.length - 1;
+    //       }
+  
+    //       slides.forEach((slide) => {
+    //         slide.classList.remove("active");
+    //       });
+  
+    //       slides[slideIndex].classList.add("active");
+    //       currentSlide = slideIndex;
+    //     }
+  
+    //     // Event listener for previous button click
+    //     prevButton.addEventListener("click", () => {
+    //       showSlide(currentSlide - 1);
+    //     });
+  
+    //     // Event listener for next button click
+    //     nextButton.addEventListener("click", () => {
+    //       showSlide(currentSlide + 1);
+    //     });
+  
+    //     // Initialize the carousel by generating carousel indicators and project cards
+    //     generateCarousel();
+  
+    //     // Optional: Implement carousel autoplay
+    //     let autoplayInterval; // To store the interval reference
+  
+    //     function startAutoplay() {
+    //       autoplayInterval = setInterval(() => {
+    //         showSlide(currentSlide + 1);
+    //       }, 5000); // Change slide every 5 seconds (adjust as needed)
+    //     }
+  
+    //     function stopAutoplay() {
+    //       clearInterval(autoplayInterval);
+    //     }
+  
+    //     startAutoplay(); // Start autoplay when the page loads
+  
+    //     // Optional: Implement carousel pause/play on hover
+    //     const carousel = document.querySelector("#carouselExampleCaptions");
+    //     carousel.addEventListener("mouseenter", stopAutoplay);
+    //     carousel.addEventListener("mouseleave", startAutoplay);
+    //   });
 
-                    <div class="col">
-                      <div class="card text-bg-dark">
-                        <img src="${project.image}" class="card-img img-fluid" style="height: 16.2rem;" alt="...">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title">${project.title}</h5>
-                          <p class="card-text">${project.description}</p>
-                          <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                          <button type="button" class="btn btn-link text-warning text-decoration-none fs-6 fw-bolder text-warning view-more-btn">View-More</button>
-                        </div>
-                      </div>
-                    </div>
+    const carouselItems = document.querySelectorAll('.carousel .carousel-item');
 
-                    <div class="col">
-                      <div class="card text-bg-dark">
-                        <img src="${project.image}" class="card-img img-fluid" style="height: 16.2rem;" alt="...">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title">${project.title}</h5>
-                          <p class="card-text">${project.description}</p>
-                          <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                          <button type="button" class="btn btn-link text-warning text-decoration-none fs-6 fw-bolder text-warning view-more-btn">View-More</button>
-                        </div>
-                      </div>
-                    </div>
+carouselItems.forEach((item) => {
+  const minPerSlide = 4;
+  let next = item.nextElementSibling;
 
-                    <div class="col">
-                      <div class="card text-bg-dark">
-                        <img src="${project.image}" class="card-img img-fluid" style="height: 16.2rem;" alt="...">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title">${project.title}</h5>
-                          <p class="card-text">${project.description}</p>
-                          <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                          <button type="button" class="btn btn-link text-warning text-decoration-none fs-6 fw-bolder text-warning view-more-btn">View-More</button>
-                        </div>
-                      </div>
-                    </div>
+  if (!next) {
+    next = item.parentElement.firstElementChild;
+  }
 
-                    <div class="col">
-                      <div class="card text-bg-dark">
-                        <img src="${project.image}" class="card-img img-fluid" style="height: 16.2rem;" alt="...">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title">${project.title}</h5>
-                          <p class="card-text">${project.description}</p>
-                          <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                          <button type="button" class="btn btn-link text-warning text-decoration-none fs-6 fw-bolder text-warning view-more-btn">View-More</button>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Add more columns for other projects if needed -->
-                  </div>
-                </div>
-              </div>
-            `;
-  
-            indicatorsHTML += `<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="${index}" class="${activeClass}" aria-current="true" aria-label="Slide ${index + 1}"></button>`;
-          });
-  
-          carouselInner.innerHTML = carouselHTML;
-          document.querySelector(".carousel-indicators").innerHTML = indicatorsHTML;
-        }
-  
-        // Function to handle "View-More" button click event
-        function onViewMoreClick(event) {
-          const projectIndex = Array.from(viewMoreButtons).indexOf(event.target);
-          const project = projects[projectIndex];
-          // Replace this with your logic to show more information about the project (e.g., using a modal or expanding the card)
-          console.log("View-More button clicked for project:", project);
-        }
-  
-        // Event listener for "View-More" buttons
-        viewMoreButtons.forEach((btn) => {
-          btn.addEventListener("click", onViewMoreClick);
-        });
-  
-        // Function to show the specified slide
-        function showSlide(slideIndex) {
-          const slides = document.querySelectorAll(".carousel-item");
-          if (slideIndex >= slides.length) {
-            slideIndex = 0;
-          } else if (slideIndex < 0) {
-            slideIndex = slides.length - 1;
-          }
-  
-          slides.forEach((slide) => {
-            slide.classList.remove("active");
-          });
-  
-          slides[slideIndex].classList.add("active");
-          currentSlide = slideIndex;
-        }
-  
-        // Event listener for previous button click
-        prevButton.addEventListener("click", () => {
-          showSlide(currentSlide - 1);
-        });
-  
-        // Event listener for next button click
-        nextButton.addEventListener("click", () => {
-          showSlide(currentSlide + 1);
-        });
-  
-        // Initialize the carousel by generating carousel indicators and project cards
-        generateCarousel();
-  
-        // Optional: Implement carousel autoplay
-        let autoplayInterval; // To store the interval reference
-  
-        function startAutoplay() {
-          autoplayInterval = setInterval(() => {
-            showSlide(currentSlide + 1);
-          }, 5000); // Change slide every 5 seconds (adjust as needed)
-        }
-  
-        function stopAutoplay() {
-          clearInterval(autoplayInterval);
-        }
-  
-        startAutoplay(); // Start autoplay when the page loads
-  
-        // Optional: Implement carousel pause/play on hover
-        const carousel = document.querySelector("#carouselExampleCaptions");
-        carousel.addEventListener("mouseenter", stopAutoplay);
-        carousel.addEventListener("mouseleave", startAutoplay);
-      });
+  item.appendChild(next.firstElementChild.cloneNode(true));
+
+  for (let i = 0; i < minPerSlide; i++) {
+    next = next.nextElementSibling;
+
+    if (!next) {
+      next = item.parentElement.firstElementChild;
+    }
+
+    item.appendChild(next.firstElementChild.cloneNode(true));
+  }
+});
+    
 
       document.addEventListener("DOMContentLoaded", function () {
         // Get the current year and update the footer
@@ -511,3 +478,22 @@ renderExpertise();
     
         startTypingAnimation();
       });
+
+        // Function to add scroll event for showing "Go to Top" button
+        function showGoToTopButton() {
+          const goToTopBtn = document.getElementById('goToTopBtn');
+    
+          function toggleGoToTopButton() {
+            if (window.scrollY > 300) {
+              goToTopBtn.style.display = 'block';
+            } else {
+              goToTopBtn.style.display = 'none';
+            }
+          }
+    
+          window.addEventListener('scroll', toggleGoToTopButton);
+        }
+        showGoToTopButton();
+        
+      
+        

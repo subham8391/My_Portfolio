@@ -120,6 +120,8 @@ main .hedder{
     /* background-color: aquamarine; */
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .excont{
     width: 90%;
@@ -150,61 +152,15 @@ main .hedder{
 .ammo{
     justify-content: space-between;
 }
-.progress-bar {
+/* .progress-bar {
     transition: width 0.3s ease;
 }
 .progress-bar:hover {
     width: 100%;
-}
-/* service section */
-.service{
-    width: 100%;
-    height: auto;
-    /* background-color: aqua; */
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 11.5rem;
-}
-.serv{
-    width: 90%;
-    height: 85vh;
-    /* background-color: blanchedalmond; */
-    flex-direction: column;
-}
-.texser{
-    width: 100%;
-    height: 15vh;
-    /* background-color: brown; */
-}
-.wraper{
-    border-radius: 1.0rem;
-    
-    height: 70vh;
-    /* border: 1px solid gray; */
-    /* overflow-x: auto; */
-    /* background-color: aqua; */
-    /* flex-wrap: wrap; */
-}
-.wraper::-webkit-scrollbar{
-    width: 0;
-}
-.wraper .card{
-    /* min-width: 10.5rem; */
-   
-    /* margin-left: 5.625rem; */
-    /* text-align: center; */
-     background-color:rgb(27, 27, 67);
-     transition: 0.5s;
-    
-}
-.card:hover{
-    z-index: 7;
-    border-radius: 25px;
-    background: rgb(27, 27, 67);
-    box-shadow:  10px 10px 52px #00ffc3,
-                 -10px -10px 52px #00d0ff;
-                 
-}
+} */
+.progress-bar {
+    transition: width 1s ease-in-out; /* Add the transition property */
+  }
 
 /* my study and exprience */
 
@@ -214,6 +170,8 @@ main .hedder{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .sty_Exp{
     justify-content: center;
@@ -270,7 +228,7 @@ main .hedder{
 
 /* my project */
 .my_project{
-    height: 100vh;
+    height: auto;
     width: 100%;
     /* background-color: bisque; */
     justify-content: center;
@@ -284,77 +242,55 @@ main .hedder{
     width: 90%;
     /* background-color: aqua; */
 }
-.mn_con{
-    height: 80vh;
-    width: 100%;
-    /* background-color: blueviolet; */
-}
-.mn_con .card:hover{
-    border-radius: 24px;
-        
-    background: rgb(27, 27, 67);
-    box-shadow: inset 5px 5px 25px #00ffc3,
-        inset -5px -5px 25px  #00d0ff;
+#myCarousel {
+    margin-top: 50px;
 }
 
-.mn_con .card {
-    overflow: hidden;
-  }
-  .mn_con .card img{
-    transition: transform .5s ease;
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
 
-  }
-  .mn_con .card:hover img{
-    transform: scale(1.1);
-  
-  }
-  
-.mnsli{
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
 }
-/* blog section */
-.blog_section{
-    width: 100%;
-    height: 87vh;
-    /* background-color: antiquewhite; */
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-start,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 6.25rem;
+   
 }
-.blg_sec{
-    width: 90%;
-    height: 80vh;
-    /* background-color: #00ffc3; */
-    
-    
-}
-.blg_con{
-    width: 100%;
-    height: 70vh;
-    justify-content: space-between;
-    align-items: center;
-}
-.blg_con .card{
-    background-color:rgb(27, 27, 67); 
-    border-radius: 1.5625rem;
-    overflow: hidden;
-}
-.blg_con .card img{
-    border-radius:1.4rem 1.4rem 0rem 0rem ;
-    transition: transform .5s ease;
-}
-.blg_con .card:hover{
-    background: rgb(27, 27, 67);
-    box-shadow: inset 5px 5px 25px #00ffc3,
-        inset -5px -5px 25px  #00d0ff;
-}
-.blg_con .card:hover img{
-    transform: scale(1.1);
-  
-  }
 
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-item-next:not(.carousel-item-start) {
+        transform: translateX(25%) !important;
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-item-prev:not(.carousel-item-end),
+    .active.carousel-item-start,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-25%) !important;
+    }
+
+    .carousel-item-next.carousel-item-start,
+    .active.carousel-item-end {
+        transform: translateX(0) !important;
+    }
+
+    .carousel-inner .carousel-item-prev,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-25%) !important;
+    }
+}
 /* contact me section */
 .contact_me{
     height: 90vh;
@@ -504,9 +440,9 @@ transition: all 0.5s;
         /* margin-bottom: 1.25rem; */
         border-radius: 25px;
         
-        background: rgb(27, 27, 67);
+        /* background: rgb(27, 27, 67);
         box-shadow: inset 5px 5px 25px #00ffc3,
-            inset -5px -5px 25px  #00d0ff;
+            inset -5px -5px 25px  #00d0ff; */
     }
     .studyaexpri{
         height: auto;
